@@ -1,0 +1,34 @@
+spring:
+  profile: test
+
+server:
+  context-path: /code-challenge
+
+grupo-zap:
+  settings:
+    portal-zap:
+      rental:
+        min: 3500
+      sale:
+        square-meters-value-min: 3500
+        min: 600000
+        in-bounding-box:
+          percent: 10
+    portal-vivareal:
+      rental:
+        max: 4000
+        condo-free:
+          percent: 30
+        in-bounding-box:
+          percent: 50
+      sale:
+        max: 700000
+    boundaries:
+      lon:
+        min: -46.693419
+        max: -46.641146
+      lat:
+        min: -23.568704
+        max: -23.546686
+  url:
+    sources: http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-2.json
